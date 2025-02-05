@@ -1,0 +1,31 @@
+1) Install Pupil Labs Core
+2) Install AdoptOpenJDK (adoptium.net; I used 21.0.1_12)
+    JAVA_HOME path option should be checked in install
+3) Install maven.apache.org. This uses C:\apache-maven-3.9.6\
+4) Clone github.com/zeromq/jeromq to C:\toolbox\jeromq. Add to MATLAB path.
+5) Edit pom.xml
+    a) Line around 290:
+        <maven.compiler.release>${jdk.target}</maven.compiler.release>
+		change to:
+	<maven.compiler.release>8</maven.compiler.release>
+		or possibly:
+	<maven.compiler.release>1.8</maven.compiler.release>
+
+    b) Line around 59, insert as:
+        <configuration>
+		<useSystemClassLoader>false</useSystemClassLoader>
+		<includes>
+			<include>TestFail.java</include>
+		</includes>
+		<testFailureIgnore>true</testFailureIgnore>
+		<rerunFailingTestsCount>5</rerunFailingTestsCount>
+	</configuration>
+
+6) cmd: set path="C:\apache-maven-3.9.6\bin";%PATH%
+   cmd: cd c:\toolbox\jeromq
+   cmd: mvn clean package
+   This creates ~3 .jar files in \target directory
+
+Examples of how to use:
+http://stackoverflow.com/questions/38060320/how-to-use-jeromq-in-matlab
+http://stackoverflow.com/questions/39316544/getting-started-with-jeromq-in-matlab
