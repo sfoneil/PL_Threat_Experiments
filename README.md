@@ -7,9 +7,9 @@ Works with Pupil Labs Core eye tracker (https://pupil-labs.com/products/core)
 
 ## Main experiments:
 1. `Arousal_new.m` - measure pupilometric responses to auditory stimuli presented for 4 seconds. Stimuli are one trial block of 24 non-threat stimuli (water sounds) and 2 blocks of 24 threat sounds (human screams).
-2. `ThreatVigilance1.m` - measure eye movements and fixations to images of neutral and high-affective (shocking or disturbing) images from International Affective Picture System dataset (IAPS; https://phhp.ufl.edu/Media.html).
-   Images presented in 3 blocks of 15 different images (45 total) for 10 seconds each.
-3. `VigilanceBaseline.m` - 5 minute block of a fixation cross for baseline eye movement measurement
+2. `ThreatVigilance1.m` - measure eye movements and fixations to images of neutral and high-affective (shocking or disturbing) images from Weierich et al. Complex Affective Scene Set (COMPASS; https://online.ucpress.edu/collabra/article/5/1/53/113044/The-Complex-Affective-Scene-Set-COMPASS-Solving)
+Images presented in 3 blocks of 15 different images (45 total) for 10 seconds each.
+6. `VigilanceBaseline.m` - 5 minute block of a fixation cross for baseline eye movement measurement
 
 ## Resources
 ### Dependent code
